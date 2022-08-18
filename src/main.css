@@ -1,0 +1,66 @@
+/***********************************/
+/********** global styles **********/
+/***********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--black-off);
+    text-decoration: none;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media screen and (max-width: 999px) {
+  
+    header {
+        height: 5vh;
+    }
+    
+    nav {
+        height: 30vh;
+        z-index: 50;
+    }
+    
+    .carousel-inner {
+        width: 100vw;
+        height: 65vh;   
+    }
+    
+    .carousel-item img {
+        height: 65vh;
+    }
+
+    #intro {
+        height: 100vh;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+
+    header {
+        height: 5vh;
+    }
+    
+    nav {
+        height: 15vh;
+        z-index: 50;
+    }
+
+    .carousel-inner {
+        height: 80vh;
+    }
+
+    #intro {
+        height: 100vh;
+    }
+}
