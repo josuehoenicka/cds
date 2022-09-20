@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./src/main.css">
+        <link rel="stylesheet" href="./src/mobile.css">
+        <link rel="stylesheet" href="./src/desktop.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
         <script src="./src/main.js" defer></script>
@@ -13,7 +15,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-primary position-fixed w-100">
-            <div class="container-fluid">
+            <div class="container-fluid" id="nav-flex">
               <a class="navbar-brand" href="https://www.facebook.com/iglesiamirecasan" target="_blank">
                 <span class="text-white-on fs-5" id="logo">Camino de Santidad</span>
               </a>
@@ -23,7 +25,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="#carouselExampleControls">Predicas</a>
+                    <a class="nav-link" href="#carouselExampleControls" id="nomobile">Predicas</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#who">Quiénes somos</a>
@@ -35,18 +37,18 @@
               </div>
             </div>
         </nav>
-        <div id="carouselExampleControls" class="carousel slide bg-white-on" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide bg-dark" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active bg-white-on">
+            <div class="carousel-item active bg-dark">
               <a href="https://www.facebook.com/100067978929915/videos/778419320134909/" target="_blank">
-                <p class="d-flex w-100 justify-content-center text-white-off">Última predica (domingo)</p>
-                <img src="./assets/pc.jpg" class="d-block w-100" alt="test">
+                <p class="d-flex w-100 justify-content-center text-white-off fs-5">Última predica (domingo)</p>
+                <img src="./assets/play.png" alt="play png" class="w-100" alt="test" id="predicas-mp4">
               </a>
             </div>
-            <div class="carousel-item active bg-white-on">
-              <a href="https://www.facebook.com/100067978929915/videos/778419320134909/" target="_blank">
-                <p class="d-flex w-100 justify-content-center text-white-off">Último estudio (martes)</p>
-                <img src="./assets/pc.jpg" class="d-block w-100" alt="test">
+            <div class="carousel-item active bg-dark">
+              <a href="https://www.facebook.com/100067978929915/videos/1432758133878600/" target="_blank">
+                <p class="d-flex w-100 justify-content-center text-white-off fs-5">Último estudio (martes)</p>
+                <img src="./assets/play.png" alt="play png" class="w-100" alt="test" id="predicas-mp4">
               </a>
             </div>
           </div>
@@ -65,49 +67,41 @@
         </section>
         <section class="w-100">
           <div class="row w-75 mx-auto" id="servicios-fila-1">     
-            <p class="p-2 fs-2 text-center border-top border-3 pt-5">¡Te invitamos a nuestras actividades y servicios pautados!</p>  
+            <p class="p-2 fs-2 text-center border-top border-3 pt-5" id="info">¡Te invitamos a nuestras actividades y servicios pautados!</p>  
               <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
-                  <img src="./assets/church.png" width="200" height="200">
-      
+                  <img src="./assets/church.png" alt="iglesia" width="200" height="200">
                   <div>
-                      <h3 class="fs-3 mt-4 px-4 pb-1 text-primary">CULTO GENERAL</h3>
-                      <p class="px-4 fs-5">Domingo 10:00hrs</p>
+                      <h3 class="fs-3 mt-4 px-4 pb-1 text-primary title-meet">CULTO GENERAL</h3>
+                      <p class="px-4 fs-5 description-meet">Domingo 10:00hrs</p>
                   </div>
-      
               </div>
-      
               <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
-                  <img src="./assets/praying.png" width="200" height="200">
-      
+                  <img src="./assets/praying.png" alt="clamor" width="200" height="200">
                   <div>
-                    <h3 class="fs-3 mt-4 px-4 pb-1 text-primary">CLAMOR</h3>
-                    <p class="px-4 fs-5">Martes 18:30hrs</p>
+                    <h3 class="fs-3 mt-4 px-4 pb-1 text-primary title-meet">CLAMOR</h3>
+                    <p class="px-4 fs-5 description-meet">Martes 18:30hrs</p>
                   </div>
               </div>   
           </div>
-          
           <div class="row w-75 mx-auto mb-5" id="servicios-fila-2">       
               <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
-                  <img src="./assets/woman.png" width="200" height="200">
-      
+                  <img src="./assets/woman.png" alt="mujer" width="200" height="200">
                   <div>
-                    <h3 class="fs-3 mt-4 px-4 pb-1 text-primary"> SERVICIO DAMAS</h3>
-                    <p class="px-4 fs-5">Viernes 14:00hrs</p>
+                    <h3 class="fs-3 mt-4 px-4 pb-1 text-primary title-meet"> SERVICIO DAMAS</h3>
+                    <p class="px-4 fs-5 description-meet">Viernes 14:00hrs</p>
                   </div>
               </div>
-      
               <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
-                  <img src="./assets/guitar.png" width="200" height="200" >
-      
+                  <img src="./assets/guitar.png" alt="guitarra" width="200" height="200" >
                   <div>
-                    <h3 class="fs-3 mt-4 px-4 pb-1 text-primary">ADORACIÓN</h3>
-                    <p class="px-4 fs-5">Sábado 17:00hrs</p>
+                    <h3 class="fs-3 mt-4 px-4 pb-1 text-primary title-meet">ADORACIÓN</h3>
+                    <p class="px-4 fs-5 description-meet">Sábado 17:00hrs</p>
                   </div>
               </div>   
           </div>
       </section>
       <section>
-        <div class="container w-50 m-auto text-center">
+        <div class="container w-50 m-auto text-center" id="nomobile">
             <h1 class="mb-5 fs-2">Queremos formar futuros predicadores y adoradores para que salgan a <span class="text-primary">rescatar almas para Cristo</span></h1>
         </div>
         <div id="local" class="border-top border-2">
@@ -121,30 +115,30 @@
         </div>
             <div>
                 <div class="wrapper-local text-center pt-5" id="more">
-                    <h2>Estamos en</h2>
-                    <h2 class="text-primary mb-4" id="typewriter"></h2>
-                    <p class="fs-5">Queremos que nuestro Señor se establezca en el sector de Barrio Norte, <br>dónde forje el camino de los más pequeños, los jóvenes y los mayores, <br>futuros adoradores y predicadores que hablen del evangelio</p>
+                    <h2 class="we-are">Estamos en</h2>
+                    <h2 class="text-primary mb-4 we-are2" id="typewriter"></h2>
+                    <p class="fs-5" id="nomobile">Queremos que nuestro Señor se establezca en el sector de Barrio Norte, <br>dónde forje el camino de los más pequeños, los jóvenes y los mayores, <br>futuros adoradores y predicadores que hablen del evangelio</p>
                     <section class="d-flex justify-content-center" id="numeros-local">
                         <div>
-                            <p class="text-primary fs-5 px-5">Localidad</p>
-                            <p>Argentina, Santa Fe</p>
+                            <p class="text-primary fs-5 px-5 info-geo">Localidad</p>
+                            <p class="info-geo2">Argentina, Santa Fe</p>
                         </div>
                         <div>
-                            <p class="text-primary fs-5 px-5">Departamento</p>
-                            <p>San Lorenzo</p>
+                            <p class="text-primary fs-5 px-5 info-geo">Departamento</p>
+                            <p class="info-geo2">San Lorenzo</p>
                         </div>
                         <div>
-                            <p class="text-primary fs-5 px-5">Dirección</p>
-                            <p>Clemente Albelo 4168</p>
+                            <p class="text-primary fs-5 px-5 info-geo">Dirección</p>
+                            <p class="info-geo2 info-geo-active">Clemente Albelo 4168</p>
                         </div>
                   </section>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap">
-      <a href="https://www.linkedin.com/in/josuehoenicka/">
-        <p class="fs-5 px-3 text-primary">Web designer: Josue Hoenicka</p>
+    <footer class="w-100 d-flex  align-items-center justify-content-center flex-wrap">
+      <a href="https://www.linkedin.com/in/josuehoenicka/" target="_blank">
+        <p class="fs-5 px-3 text-primary footer-title" id="nomobile">Web designer: Josue Hoenicka</p>
       </a>
     </footer>
     </body>
